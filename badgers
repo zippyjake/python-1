@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+import time
+import colors as c
+
+print(c.clear)
+
+while True:
+    print('''
+             ____             _                     
+            |  _ \   /\      | |                    
+            | |_) | /  \   __| | __ _  ___ _ __ ___ 
+            |  _ < / /\ \ / _` |/ _` |/ _ \  __/ __|
+            | |_) / ____ \ (_| | (_| |  __/ |  \__ |
+            |____/_/    \_\__,_|\__, |\___|_|  |___/
+                                 __/ |              
+                                |___/               
+    ''')
+    for count in range(3):
+        for count in range(12):
+            print('Badgers')
+            time.sleep(.38)
+        for count in range(2):
+            print('Mushroom.')
+            time.sleep(.5)
+        print(c.clear)
+    for count in range(11):
+        print('Badgers!')
+        time.sleep(.38)
+    for count in range(2):
+        print('Ahh! Its a Snake!')
+        time.sleep(.5)
+    for count in range(2):
+        print('Snake!')
+        time.sleep(.5)
+    print('Oh its a Snake!')
+    time.sleep(.5)
+    print(c.clear)

@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time
+b = c.blue
+r = c.green
+
+print(c.clear)
+print(c.yellow + 'Mmmmmmm, Multiplication Tables')
+number = input("What # would you like to learn about?? ")
+print('Table for {}'.format(number))
+
+for multiplier in range(10000000000000,0,-1):
+    anwser = multiplier * int(number)
+    form = b + '{}' + r + " X " + b + '{}' + r + ' = ' + b + "{}"
+    print(form.format(number,multiplier,anwser))
+    time.sleep(.01)
