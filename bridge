@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+
+print('To pass you must ask 3 questions')
+
+def prompt(question):
+    print(question)
+    anwser = input('> ' + c.base3)
+    print(c.reset)
+    return anwser
+name = prompt('What is your name?')
+
+print('What is your quest')
+quest = input('> ' + c.base3)
+print(c.reset)
+
+if name == 'lancelot' or 'galahand':
+    print('OK, so whats your favorite color')
+    color = prompt('> ')
+    print('OK thy may pass')
+elif name == 'robin':
+    print('Whatis the capital of Assyria?')
+    cap = prompt('> ')
+    if cap == 'Assur' or 'Nineveh':
+        print('Ok thy may pass')
+    else:
+        print('You died')
+elif name == 'arthur':
+    print('What is the air-speed velocity of an unladen swallow')
+
