@@ -3,30 +3,45 @@
 import random
 import colors as c
 
+print(c.clear)
+
 print('To pass you must ask 3 questions')
 
 def prompt(question):
     print(question)
-    anwser = input('> ' + c.base3)
+    anwser = input('> ' + c.base3).lower().strip()
     print(c.reset)
     return anwser
+
+def live():
+    print('thy may pass')
+def die():
+    print('you died')
+
 name = prompt('What is your name?')
 
 print('What is your quest')
 quest = input('> ' + c.base3)
 print(c.reset)
 
-if name == 'lancelot' or 'galahand':
+if name == 'lancelot' or name == 'galahand':
     print('OK, so whats your favorite color')
     color = prompt('> ')
-    print('OK thy may pass')
+    live()
 elif name == 'robin':
-    print('Whatis the capital of Assyria?')
+    print('What is the capital of Assyria?')
     cap = prompt('> ')
-    if cap == 'Assur' or 'Nineveh':
-        print('Ok thy may pass')
+    if cap == 'Assur' or cap == 'Nineveh':
+        live()
     else:
-        print('You died')
+        die()
 elif name == 'arthur':
     print('What is the air-speed velocity of an unladen swallow')
+    q = prompt('> ')
+    if q == '24':
+        live()
+    elif q == 'What do you mean an african or european swallow':
+        print('the bridgekeeper died')
+    else:
+        die()
 
