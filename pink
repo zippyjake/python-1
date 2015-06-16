@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+import time
+from ask import ask
+
+print(c.clear)
+print(c.magenta + 'Welcome to the PFUDOR Quiz, you must anwser 3 question.')
+print(c.magenta + "Let's see what you know")
+
+def q1():
+    anwser = ask(c.magenta + 'What color are the unicorns?' + c.reset)
+    if anwser.startswith('pink'):
+        print(c.magenta + 'YYYYYYYYAAAAAAAAAAAAAAAYYYYYYYYYYYYY')
+        return True
+    print('GO GET A FLIPPIN LIFE!!!!!')
+    return False
+def q2():
+    anwser = ask(c.magenta + 'Where are they danceing?')
+    if anwser.startswith('rainbows'):
+        print(c.magenta + 'YYYYYYYYAAAAAAAAAAAAAAAYYYYYYYYYYYYY')
+        return True
+    print('GO GET A FLIPPIN LIFE!!!!!')
+    return False
+def q3():
+    anwser = ask(c.magenta + 'Please use one word to describe the texture of their magical fur:')
+    if anwser.startswith('smiles'):
+        print(c.magenta + 'YYYYYYYYAAAAAAAAAAAAAAAYYYYYYYYYYYYY')
+        return True
+    print('GO GET A FLIPPEN LIFE!!!!!')
+    return False
+questions = [q1,q2,q3]
+
+questions[0]()
