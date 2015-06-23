@@ -16,6 +16,7 @@ def q1():
         return True
     print('GO GET A FLIPPIN LIFE!!!!!')
     return False
+
 def q2():
     anwser = ask(c.magenta + 'Where are they danceing?')
     if anwser.startswith('rainbows'):
@@ -23,6 +24,7 @@ def q2():
         return True
     print('GO GET A FLIPPIN LIFE!!!!!')
     return False
+
 def q3():
     anwser = ask(c.magenta + 'Please use one word to describe the texture of their magical fur:')
     if anwser.startswith('smiles'):
@@ -30,6 +32,7 @@ def q3():
         return True
     print('GO GET A FLIPPEN LIFE!!!!!')
     return False
+
 questions = [q1,q2,q3]
 
 questions[0]()
