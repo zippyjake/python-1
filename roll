@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+import time
+
+dice = []
+
+
+dice.append(''' -------               
+|       |
+|   o   |
+|       |
+ -------
+ ''')
+
+dice.append(''' -------
+| o     |
+|       |
+|     o |
+ -------
+ ''')
+
+dice.append(''' -------
+| o     |
+|   o   |
+|     o |
+ -------
+ ''')
+
+dice.append(''' -------
+| o   o |
+|       |
+| o   o |
+ -------
+ ''')
+ 
+dice.append(''' -------
+| o   o |
+|   o   |
+| o   o |
+ -------
+ ''')
+
+dice.append(''' -------
+| o   o |
+| o   o |
+| o   o |
+ -------
+ ''')
+
+for die in dice:
+    print(c.clear + c.random_color() + die + c.reset, end="")
+    time.sleep(1)
