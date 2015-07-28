@@ -49,6 +49,10 @@ dice.append(''' -------
  -------
  ''')
 
-for die in dice:
-    print(c.clear + c.random_color() + die + c.reset, end="")
-    time.sleep(1)
+num = 1
+while True:
+    print(c.clear, end="")
+    for count in range(num):
+        die = random.choice(dice)
+        print(c.random_color() + die + c.reset, end="")
+        input()

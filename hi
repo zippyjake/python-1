@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+
+red = '\033[0;31m'
+orange = '\033[1;31m'
+yellow = '\033[0;33m'
+green = '\033[0;32m'
+blue = '\033[0;34m'
+violet = '\033[1;35m'
+cyan = '\033[0:36m'
+magenta = '\033[0;35m'
+
+colors = [
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    violet,
+    cyan,
+    magenta
+]
+
+print(random.choice(colors) + 'Hello!')
+name = input(random.choice(colors) + 'What_is_your_name?')
+while True:
+    print(random.choice(colors) + 'Hello_' + random.choice(colors) + name + '_',end='')
