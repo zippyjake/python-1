@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.yellow + 'Do you like waffles?')
+waffles = input('> ').strip()
+
+if waffles == 'yes':
+    print(c.blue + 'Do you like pancakes?')
+    pancakes = input('> ').strip()
+    if pancakes == 'yes':
+        print(c.red + 'do you like french toast?')
+        french = input('> ').strip()
+        if french == 'yes':
+            print(c.green + "cant wait to have a mouthful")
+        else:
+            print('WELL TO BAD')
+    else:
+        print('WELL TO BAD')
+else:
+    print('WELL TOO BAD')
