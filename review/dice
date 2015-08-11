@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+
+sides=[None]
+
+sides.append(''' -------
+|       |
+|   o   |
+|       |
+ -------''')
+
+sides.append(''' -------
+|     o |
+|       |
+| o     |
+ -------''')
+
+sides.append(''' -------
+| o     |
+|   o   |
+|     o |
+ -------''')
+
+sides.append(''' -------
+| o   o |
+|       |
+| o   o |
+ -------''')
+
+sides.append(''' -------
+| o   o |
+|   o   |
+| o   o |
+ -------''')
+
+sides.append(''' -------
+| o   o |
+| o   o |
+| o   o |
+ -------''')
+
+
