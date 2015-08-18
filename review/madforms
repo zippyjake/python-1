@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+from ask import ask
+
+text = '''..
+
+One day I walked to {Noun1} and got a {Noun2} and it looked very {Adjective1}.
+I then walked into {Person1} and then I began to {Verb1}. {Person1} began to 
+{Verb2} me. I then found a {Noun3} that sold {Noun4}. I Bought a {Noun4} and got
+sick when I {Verb3} it. So I went to go see a {AFamousPerson}. {AFamousPerson}
+told me to go take {Noun5}. When I took {Noun5} I felt {Verb4}. I went home to
+see that {AFamousPerson1} was there. I got a {Noun6} from {AFamousPerson1}.
+I tried to make {AMeal} but my pet {Animal} kept {VerbEndingWithING} me. So I gave it
+some {Food} And put my pet {Animal} to bed. Then I finished my {AMeal}. 
+After I ate {AMeal} I put on {Noun7} and went to {Noun8}.
+'''
+
+lines = text.splitlies()
+title = lines[0]
+text = "\n".join(lines[1:])
+
+words = {
+    "Noun1" : None,
+    "Noun2" : None,
+    "Adjective1" : None,
+    "Person1" : None,
+    "Verb1" : None,
+    "Verb2" : None,
+    "Noun3" : None,
+    "Noun4" : None,
+    "Verb3" : None,
+    "AFamousPerson" : None,
+    "Noun5" : None,
+    "Verb4" : None,
+    "AFamousPerson1" : None,
+    "Noun6" : None,
+    "AMeal" : None,
+    "Animal" : None,
+    "VerbEndingWithING" : None,
+    "Food" : None,
+    "Noun7" : None,
+    "Noun8" : None
+}
+
+for key in words:
+    words[key] = ask(key + ': ')
+
+print(c.clear + c.base3 + title + c.reset)
+print(text.format(**words))

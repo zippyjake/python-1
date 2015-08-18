@@ -10,4 +10,4 @@ while True:
   for n in range(100):
     binform = c.clear + c.yellow + '{}: {:04b}' + c.reset
     print(binform.format(n,n))
-    time.sleep(sleep)
+    sleep(sleep)
